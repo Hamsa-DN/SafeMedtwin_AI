@@ -1,0 +1,9 @@
+# Force Git to treat these as binary — critical on Windows, where Git's
+# default autocrlf line-ending conversion can silently corrupt binary
+# files (e.g. .joblib model files failing to load with errors like
+# "XGBoostError: input stream corrupted") if they're ever treated as text.
+*.joblib binary
+*.db binary
+*.pkl binary
+*.npy binary
+*.npz binary

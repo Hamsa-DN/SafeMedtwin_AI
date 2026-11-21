@@ -1,0 +1,52 @@
+{
+  "diabetes": {
+    "accuracy": 0.9062,
+    "roc_auc": 0.9704,
+    "precision": 0.9054,
+    "recall": 0.9031,
+    "f1": 0.9042,
+    "n_train": 3200,
+    "n_test": 800,
+    "prevalence": 0.4905
+  },
+  "cvd": {
+    "accuracy": 0.8812,
+    "roc_auc": 0.9625,
+    "precision": 0.875,
+    "recall": 0.8943,
+    "f1": 0.8846,
+    "n_train": 3200,
+    "n_test": 800,
+    "prevalence": 0.509
+  },
+  "ckd": {
+    "accuracy": 0.9113,
+    "roc_auc": 0.9753,
+    "precision": 0.9147,
+    "recall": 0.8979,
+    "f1": 0.9062,
+    "n_train": 3200,
+    "n_test": 800,
+    "prevalence": 0.4775
+  },
+  "liver": {
+    "accuracy": 0.8688,
+    "roc_auc": 0.9481,
+    "precision": 0.881,
+    "recall": 0.8473,
+    "f1": 0.8638,
+    "n_train": 3200,
+    "n_test": 800,
+    "prevalence": 0.4915
+  },
+  "hypertension": {
+    "accuracy": 0.855,
+    "roc_auc": 0.9475,
+    "precision": 0.8597,
+    "recall": 0.8467,
+    "f1": 0.8532,
+    "n_train": 3200,
+    "n_test": 800,
+    "prevalence": 0.4978
+  }
+}

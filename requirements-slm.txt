@@ -1,0 +1,15 @@
+# Optional — only needed for the real local SLM/classifier components:
+#   - SAFEMEDTWIN_SLM_BACKEND=transformers (TinyLlama, generative)
+#   - models/train_distilbert_classifier.py (DistilBERT, text classification)
+# Not required for the core app.
+#
+# Install with: pip install -r requirements-slm.txt
+#transformers>=4.40
+#torch>=2.2
+#accelerate>=1.1.0
+#scikit-learn>=1.4
+
+# Optional dependencies for SafeMedTwin SLM/classifier components
+transformers>=4.40
+accelerate>=1.1.0
+scikit-learn>=1.4

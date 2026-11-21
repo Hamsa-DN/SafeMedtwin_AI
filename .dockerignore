@@ -1,0 +1,15 @@
+.git
+.gitignore
+.gitattributes
+__pycache__
+*.pyc
+.venv
+venv
+env
+.env
+safemedtwin.db
+data_persist/
+models/*.joblib
+data/raw/*.csv
+README.md
+*.md

@@ -1,0 +1,19 @@
+.feature {
+        background: rgba(255,255,255,0.07);
+        border: 1px solid rgba(255,255,255,0.13);
+        border-radius: 10px;
+        padding: 13px 16px;
+        margin-top: 11px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 650;
+        line-height: 1.5;
+    }
+
+    .feature div {
+        color: #c6dce5;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 4px;
+        line-height: 1.5;
+    }

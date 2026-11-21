@@ -1,0 +1,30 @@
+# One-command setup for teammates: `docker compose up --build`
+#
+# Persists the SQLite user database (accounts, prediction history, chat
+# history) across container restarts/rebuilds via a named volume — without
+# this, every `docker compose up --build` would wipe everyone's accounts.
+
+services:
+  safemedtwin:
+    build:
+      context: .
+      args:
+        # Set to "true" (via `docker compose build --build-arg WITH_SLM=true`,
+        # or uncomment the line below) to bake in real TinyLlama + DistilBERT
+        # instead of the default lightweight template SLM. Adds ~3-4GB and
+        # several minutes to the build.
+        WITH_SLM: "false"
+        # WITH_SLM: "true"
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - safemedtwin_data:/app/data_persist
+    environment:
+      # points the app's SQLite file into the persisted volume above,
+      # instead of the container's own (ephemeral) filesystem
+      - SAFEMEDTWIN_DB=/app/data_persist/safemedtwin.db
+
+volumes:
+  safemedtwin_data:

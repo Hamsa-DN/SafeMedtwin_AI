@@ -1,0 +1,31 @@
+# The versions below (scikit-learn, xgboost, pandas, numpy, joblib, shap)
+# are pinned EXACTLY to what models/*.joblib were trained with. Do not
+# loosen these unless you also rerun `python models/train_models.py` --
+# XGBoost/pandas pickle a fair amount of internal state (feature names,
+# booster config) that does not always reconstruct correctly across
+# versions, which causes errors like:
+#   "ValueError: data did not contain feature names, but the following
+#   fields are expected: ..."
+# If you ever hit that error again after changing any package version,
+# the fix is either (a) reinstall these exact pins, or (b) delete
+# models/*.joblib and rerun train_models.py with whatever versions you
+# have installed, so the model matches your environment instead.
+scikit-learn==1.8.0
+xgboost==3.3.0
+shap==0.52.0
+pandas==3.0.2
+numpy==2.4.4
+joblib==1.5.3
+
+fastapi>=0.110
+uvicorn[standard]>=0.29
+streamlit>=1.35
+plotly>=5.20
+pydantic>=2.6
+requests>=2.31
+anthropic>=0.30
+google-genai>=1.0
+pdfplumber>=0.11
+pypdfium2>=4.30
+python-dotenv>=1.0
+pytesseract
