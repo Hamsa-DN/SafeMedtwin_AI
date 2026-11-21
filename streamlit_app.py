@@ -1756,7 +1756,10 @@ with tab_twin:
                     st.write(r["text"])
                     m1, m2, m3 = st.columns(3)
                     m1.metric("Latency", f"{r['latency_ms']:.0f} ms")
-                    m2.metric("Accuracy", f"{r['accuracy_score']:.0%}")
+                    accuracy = r.get("accuracy_score")
+
+                    m2.metric("Accuracy",f"{accuracy:.0%}" if accuracy is not None else "N/A"
+)
                     m3.metric("Completeness", f"{r['completeness_score']:.0%}")
                     if r["hallucination_flags"]:
                         st.error("⚠️ " + "; ".join(r["hallucination_flags"]))
