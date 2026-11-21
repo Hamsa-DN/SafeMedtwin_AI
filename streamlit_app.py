@@ -1760,7 +1760,9 @@ with tab_twin:
 
                     m2.metric("Accuracy",f"{accuracy:.0%}" if accuracy is not None else "N/A"
 )
-                    m3.metric("Completeness", f"{r['completeness_score']:.0%}")
+                    completeness = r.get("completeness_score")
+                    m3.metric( "Completeness",f"{completeness:.0%}" if completeness is not None else "N/A"
+)
                     if r["hallucination_flags"]:
                         st.error("⚠️ " + "; ".join(r["hallucination_flags"]))
 
